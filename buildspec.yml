@@ -12,10 +12,11 @@ phases:
       -echo Build started on 'date'
       -cp index.html /var/www/html/
 
-  post build:
+  post_build:
     commands: 
       -echo configuring NGINX
 
 artifacts:
   files: 
+
       -var/www/html/index.html
