@@ -2,8 +2,7 @@ version: 0.2
 phases: 
   install: 
     commands: 
-      - echo "Installing NGINX" 
-      - sudo yum update -y && sudo yum install -y NGINX 
+      - apt-get update && apt-get install -y NGINX 
   build:
     commands:
       - echo "Checking AWS identity (whoami)"
