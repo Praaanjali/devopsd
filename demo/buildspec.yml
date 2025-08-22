@@ -3,8 +3,7 @@ phases:
   install: 
     commands: 
       - echo "Installing NGINX" 
-      - apt-get update
-      - apt-get install -y nginx 
+      - apt-get update && apt-get install -y nginx 
   build:
     commands:
       - echo Build started on 'date'  
