@@ -1,0 +1,26 @@
+# Windows junk
+*.tmp
+*.log
+*.ini
+*.dat
+*.lnk
+Thumbs.db
+Desktop.ini
+
+# OneDrive / System folders
+AppData/
+Contacts/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+Pictures/
+Videos/
+Saved Games/
+Searches/
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
