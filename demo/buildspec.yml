@@ -2,16 +2,11 @@ version: 0.2
 phases: 
   install: 
     commands: 
-      - apt-get update && apt-get install -y NGINX 
+      - apt-get update -y && apt-get install nginx -y 
   build:
     commands:
-      - echo "Checking AWS identity (whoami)"
-      - aws sts get-caller-identity
-      - echo Build started on 'date'  
       - cp index.html /var/www/html/
-  post_build:
-    commands:
-      - echo configuring NGINX     
+      
 artifacts: 
   files: 
       - '**/*'
