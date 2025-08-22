@@ -3,9 +3,11 @@ phases:
   install: 
     commands: 
       - echo "Installing NGINX" 
-      - sudo apt-get update && sudo apt-get install -y nginx 
+      - sudo yum update -y && sudo yum install -y NGINX 
   build:
     commands:
+      - echo "Checking AWS identity (whoami)"
+      - aws sts get-caller-identity
       - echo Build started on 'date'  
       - cp index.html /var/www/html/
   post_build:
