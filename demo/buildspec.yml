@@ -1,12 +1,17 @@
-version: 0.2 
-phases: 
-  install: 
-    commands: 
-      - apt-get update -y && apt-get install nginx -y 
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing NGINX"
+      - sudo apt-get update -y
+      - sudo apt-get install nginx -y
+
   build:
     commands:
-      - cp index.html /var/www/html/
-      
-artifacts: 
-  files: 
-      - '**/*'
+      - echo "Copying index.html to NGINX root"
+      - sudo cp index.html /usr/share/nginx/html/
+
+artifacts:
+  files:
+    - '**/*'
